@@ -20,7 +20,7 @@ const routes: RouteRecordRaw[] = [
       { path: 'meatreview', component: () => import('pages/meatreview.vue') },
       { path: 'finalreview', component: () => import('pages/finalreview.vue') },
       { path: 'successpage', component: () => import('pages/successpage.vue') },
-      { path: 'popup', component: () => import('pages/popup.vue') },
+    
     ],
   },
 
