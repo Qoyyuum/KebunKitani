@@ -1,34 +1,33 @@
 <template>
   <q-page padding>
 
-     <q-field standout="bg-teal text-white" label="Jenis Tanaman" stack-label :dense="dense">
+     <q-input standout="bg-teal text-white" label="Jenis Tanaman" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
+      </q-input>
 
-      <q-field standout="bg-teal text-white" label="Berat tanaman dalam KG " stack-label :dense="dense">
+      <q-input standout="bg-teal text-white" label="Berat tanaman dalam KG " stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
+      </q-input>
        
-      <q-field standout="bg-teal text-white" label="KELUASAN DIUSAHAKAN MENGIKUT JENIS SAYUR (Hektar)" stack-label :dense="dense">
+      <q-input standout="bg-teal text-white" label="KELUASAN DIUSAHAKAN MENGIKUT JENIS SAYUR (Hektar)" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
+      </q-input>
        
-      <q-field standout="bg-teal text-white" label="HARGA HASIL DI LADANG / UNIT (B$/KG)" stack-label :dense="dense">
+      <q-input standout="bg-teal text-white" label="HARGA HASIL DI LADANG / UNIT (B$/KG)" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
+      </q-input>
 
-      <q-btn :ripple="{ center: true }" color="secondary" label="Back" no-caps :to="{ path: 'vegelist' }" /> 
-      <q-btn :ripple="{ center: true }" color="secondary" label="Tambah" no-caps :to="{ path: 'vegelist' }" /> 
-      <q-btn :ripple="{ center: true }" color="secondary" label="Review" no-caps :to="{ path: 'finalreview' }" /> 
-
+      <q-btn :ripple="{ center: true }" color="secondary" label="Balik" no-caps :to="{ path: 'vegelist' }" /> 
+      <q-btn round color="secondary" icon="mdi-plus" :to="{ path: 'vegelist' }" />
+      <q-btn round color="secondary" icon="mdi-text-box-search-outline" :to="{ path: 'finalreview' }" />
   </q-page>
 </template>
 

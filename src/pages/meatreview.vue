@@ -1,56 +1,60 @@
 <template>
   <q-page padding>
    Jual
-     <q-field standout="bg-teal text-white" label="Jantan" stack-label :dense="dense">
+     <q-input standout="bg-teal text-white" label="Jantan" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
-    <q-field standout="bg-teal text-white" label="Betina" stack-label :dense="dense">
+      </q-input>
+
+    <q-input standout="bg-teal text-white" label="Betina" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
+      </q-input>
 
    Sembilih   
-       <q-field standout="bg-teal text-white" label="Jantan" stack-label :dense="dense">
+      <q-input standout="bg-teal text-white" label="Jantan" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
-    <q-field standout="bg-teal text-white" label="Betina" stack-label :dense="dense">
+      </q-input>
+
+      <q-input standout="bg-teal text-white" label="Betina" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
+      </q-input>
 
     Lahir  
-       <q-field standout="bg-teal text-white" label="Jantan" stack-label :dense="dense">
+       <q-input standout="bg-teal text-white" label="Jantan" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
-    <q-field standout="bg-teal text-white" label="Betina" stack-label :dense="dense">
+      </q-input>
+
+    <q-input standout="bg-teal text-white" label="Betina" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
+      </q-input>
       
     Mati  
-       <q-field standout="bg-teal text-white" label="Jantan" stack-label :dense="dense">
+       <q-input standout="bg-teal text-white" label="Jantan" stack-label :dense="dense">
         <template v-slot:control>
           <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
         </template>
-      </q-field>
-    <q-field standout="bg-teal text-white" label="Betina" stack-label :dense="dense">
-        <template v-slot:control>
-          <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
-        </template>
-      </q-field>
+      </q-input>
       
-<q-btn :ripple="{ center: true }" color="secondary" label="Back" no-caps :to="{ path: 'meatlist' }" /> 
-<q-btn :ripple="{ center: true }" color="secondary" label="Tambah" no-caps :to="{ path: 'meatlist' }" /> 
-<q-btn :ripple="{ center: true }" color="secondary" label="Review" no-caps :to="{ path: 'finalreview' }" /> 
+    <q-input standout="bg-teal text-white" label="Betina" stack-label :dense="dense">
+        <template v-slot:control>
+          <div class="self-center full-width no-outline" tabindex="0">{{text}}</div>
+        </template>
+      </q-input>
+      
+      <q-btn :ripple="{ center: true }" color="secondary" label="Balik" no-caps :to="{ path: 'meatlist' }" /> 
+      <q-btn round color="secondary" icon="mdi-plus" :to="{ path: 'meatlist' }" />
+      <q-btn round color="secondary" icon="mdi-text-box-search-outline" :to="{ path: 'finalreview' }" />
 
   </q-page>
 

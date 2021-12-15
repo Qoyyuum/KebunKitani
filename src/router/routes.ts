@@ -5,7 +5,7 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: 'login', component: () => import('pages/login.vue') },
+      { path: '.', component: () => import('pages/login.vue') },
       { path: 'dashboard', component: () => import('pages/dashboard.vue') },
       { path: 'settings', component: () => import('pages/settings.vue') }, 
       { path: 'harvesttype', component: () => import('pages/harvesttype.vue') }, 
@@ -20,6 +20,7 @@ const routes: RouteRecordRaw[] = [
       { path: 'meatreview', component: () => import('pages/meatreview.vue') },
       { path: 'finalreview', component: () => import('pages/finalreview.vue') },
       { path: 'successpage', component: () => import('pages/successpage.vue') },
+      { path: 'popup', component: () => import('pages/popup.vue') },
     ],
   },
 

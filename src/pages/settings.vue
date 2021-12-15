@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-  <q-btn :ripple="{ center: true }" color="secondary" label="Back" no-caps :to="{ path: 'dashboard' }" /> 
+  <q-btn :ripple="{ center: true }" color="secondary" label="Balik" no-caps :to="{ path: 'dashboard' }" /> 
  <div class="q-pa-md" style="max-width: 350px">
     <q-list bordered padding>
       <q-item-label header>User Controls</q-item-label>
@@ -78,7 +78,9 @@
       </q-item>
 
       <q-separator spaced />
-      <q-item-label header>Logout</q-item-label>
+      Log Keluar
+       <q-btn round color="secondary" icon="mdi-logout" :to="{ path: '.' }" />
+      
 
     </q-list>
   </div>

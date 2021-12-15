@@ -92,8 +92,9 @@
 
       </tbody>
     </q-markup-table>
-  </div>
-  <q-btn :ripple="{ center: true }" color="secondary" label="Submit" no-caps :to="{ path: 'successpage' }" />   
+  </div> 
+
+  <q-btn round color="secondary" icon="mdi-text-box-check" :to="{ path: 'successpage' }" />
   
   </q-page>
 </template>  

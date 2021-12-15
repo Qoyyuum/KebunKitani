@@ -4,7 +4,7 @@
       padding="xl"
       color="secondary"
       round
-      icon="eco"
+      icon="mdi-seed"
       :to="{ path: 'croptype' }"
     />
 
@@ -12,10 +12,10 @@
       padding="xl"
       color="secondary"
       round
-      icon= "eco"
+      icon= "mdi-food-drumstick"
       :to="{ path: 'meatlist' }"
     />
-<q-btn :ripple="{ center: true }" color="secondary" label="Back" no-caps :to="{ path: 'dashboard' }" /> 
+<q-btn :ripple="{ center: true }" color="secondary" label="Balik" no-caps :to="{ path: 'dashboard' }" /> 
   </q-page>
 </template>
 

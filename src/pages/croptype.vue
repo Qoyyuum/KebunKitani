@@ -5,14 +5,14 @@
       padding="xl"
       color="secondary"
       round
-      icon="eco" no-caps :to="{ path: 'vegelist' }"
+      icon="mdi-corn" no-caps :to="{ path: 'vegelist' }"
     />
 
      <q-btn
       padding="xl"
       color="secondary"
       round
-      icon="eco" no-caps :to="{ path: 'fruitlist' }"
+      icon="mdi-food-apple" no-caps :to="{ path: 'fruitlist' }"
 
     />
  
@@ -20,7 +20,7 @@
       padding="xl"
       color="secondary"
       round
-      icon="eco" no-caps :to="{ path: 'flowerlist' }"
+      icon="mdi-flower" no-caps :to="{ path: 'flowerlist' }"
 
     />
 
