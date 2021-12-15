@@ -79,7 +79,7 @@
 
       <q-separator spaced />
       Log Keluar
-       <q-btn round color="secondary" icon="mdi-logout" :to="{ path: '.' }" />
+       <q-btn round color="secondary" icon="mdi-logout" :to="{ path: '/' }" />
       
 
     </q-list>
