@@ -52,7 +52,6 @@
 
     <q-btn round color="secondary" icon="mdi-plus" :to="{ path: 'harvesttype' }" />
     <q-btn :ripple="{ center: true }" color="secondary" label="Settings" no-caps :to="{ path: 'settings' }" />  
-
   </q-page>
 </template>
 
