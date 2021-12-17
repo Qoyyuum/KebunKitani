@@ -16,7 +16,7 @@
           label="Terus ke Dashboard"
           color="primary"
           v-close-popup
-          @click="this.$router.push({ path: '' })"
+          @click="this.$router.push({ path: '/' })"
         />
       </q-card-actions>
     </q-card>
@@ -29,7 +29,7 @@ export default defineComponent({
   name: 'NetworkCheck',
   setup() {
     return {
-      networkCheck: ref(navigator.onLine),
+      networkCheck: ref(!navigator.onLine),
     };
   },
 });
