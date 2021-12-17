@@ -1,6 +1,5 @@
 <template>
   <q-page >
-      <q-avatar color="secondary" text-color="white">J</q-avatar>
       <q-input standout="bg-teal text-white" v-model="text" label="Nama Ladang" />
       <q-input standout="bg-teal text-white" v-model="text" label="Nama Pengguna" />
       <q-input standout="bg-teal text-white" v-model="text" label="Kata Laluan" />

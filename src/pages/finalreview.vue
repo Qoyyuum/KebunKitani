@@ -7,8 +7,15 @@
       :rows-per-page-options="[10]"
       row-key="name"
     >
+       
       <template v-slot:body="props">
         <q-tr :props="props">
+           
+          <q-td key="desc" :props="props">
+           {{ props.row.delete }}
+            <q-btn round color="red-5" icon="mdi-delete" />
+          </q-td>
+
           <q-td key="desc" :props="props">
             {{ props.row.name }}
             <q-popup-edit v-model="props.row.name" buttons v-slot="scope">
@@ -50,16 +57,15 @@
     </q-table>
 
     <q-btn round color="secondary" icon="mdi-plus" :to="{ path: 'harvesttype' }" />
-    <q-btn :ripple="{ center: true }" color="secondary" label="Settings" no-caps :to="{ path: 'settings' }" />  
-
-
-  <q-btn round color="secondary" icon="mdi-text-box-check" :to="{ path: 'successpage' }" />
+    <q-btn round color="secondary" icon="mdi-text-box-check" :to="{ path: 'successpage' }" />
   
   </q-page>
 </template>  
+
 <script>
   import { ref } from 'vue'
 const columns = [
+  {name: 'delete', label: 'Padam' },
   { name: 'desc', align: 'left', label: 'Ternakan/Tanaman', field: 'name' },
   { name: 'weight', align: 'center', label: 'Berat(KG)', field: 'Berat(KG)' },
   { name: 'gender', label: 'Jantina(J/B)', field: 'Jantina(J/B)' },
