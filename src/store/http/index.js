@@ -4,8 +4,8 @@ import {
 import farm from '../farmClient';
 import rules from './rules';
 import SyncError from './SyncError';
-import { formatLogForServer, isUnsynced } from '../../../utils/farmLog';
-import createQuery, { filterByTimestamp } from '../../../utils/createQuery';
+import { formatLogForServer, isUnsynced } from '../../utils/farmLog';
+import createQuery, { filterByTimestamp } from '../../utils/createQuery';
 
 export const checkHost = () => {
   if (localStorage.getItem('host') !== null) {

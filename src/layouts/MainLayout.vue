@@ -18,12 +18,8 @@
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <div v-if="loggedIn">
-        <Login />
-      </div>
-      <div v-else>
-        <Settings />
-      </div>
+      <Profile />
+      <!-- <Settings /> -->
       <EssentialLink
         v-for="link in essentialLinks"
         :key="link.title"
@@ -39,8 +35,8 @@
 
 <script lang="ts">
 import EssentialLink from 'components/EssentialLink.vue';
-import Login from 'components/Login.vue';
-import Settings from 'components/Settings.vue';
+import Profile from 'components/Profile.vue';
+// import Settings from 'components/Settings.vue';
 
 const linksList = [
   {
@@ -70,26 +66,24 @@ const linksList = [
 ];
 
 import { defineComponent, ref } from 'vue';
-import { useQuasar } from 'quasar';
+// import { useQuasar } from 'quasar';
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
     EssentialLink,
-    Login,
-    Settings,
+    Profile,
+    // Settings,
   },
 
   setup() {
-    const $q = useQuasar();
+    // const $q = useQuasar();
     const leftDrawerOpen = ref(true);
-    let loggedIn = ref($q.localStorage.getItem('token'));
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
-      loggedIn,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },

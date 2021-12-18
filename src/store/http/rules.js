@@ -12,7 +12,7 @@
  * be provided in http/module.js, when the syncReducer is instantiated under the
  * sendRemoteLogs function.
  */
-import { getLogTypes } from '../../../utils/farmLog';
+import { getLogTypes } from '../../utils/farmLog';
 
 // A helper that determines if a value is falsey, or is an empty array or object.
 const isNullish = val => (

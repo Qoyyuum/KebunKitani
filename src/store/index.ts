@@ -11,7 +11,7 @@ import { AuthStateInterface } from './auth/state';
 import taskModule from './tasks'
 import { TaskStateInterface } from './tasks/state';
 
-import farmModule from './farm/index';
+// import farmModule from './farm/index';
 // import { FarmStateInterface } from './farm/state';
 /*
  * If not building with SSR mode, you can
@@ -47,7 +47,7 @@ export default store(function (/* { ssrContext } */) {
       taskModule,
       authModule,
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      farmModule
+      // farmModule
     },
 
     // enable strict mode (adds overhead!)

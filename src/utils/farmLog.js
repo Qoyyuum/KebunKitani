@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable no-param-reassign */
 import { uniq, zipObj, without } from 'ramda';
-import defaultResources from '../core/store/defaultResources';
+import defaultResources from '../store/defaultResources';
 
 const data = Symbol('data');
 const changed = Symbol('changed');

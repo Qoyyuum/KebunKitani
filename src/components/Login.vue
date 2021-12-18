@@ -1,38 +1,53 @@
 <template>
-  <q-page class="q-pa-md">
-    <div class="q-gutter-y-md column">
-      <h4>Selamat Datang!</h4>
-      <q-input
-        standout="bg-teal text-white"
-        v-model="farmosUrl"
-        id="farmosUrl"
-        label="Nama Ladang"
-        v-on:input="checkValues"
-      />
-      <q-input
-        standout="bg-teal text-white"
-        v-model="username"
-        id="username"
-        label="Nama Pengguna"
-        v-on:input="checkValues"
-      />
-      <q-input
-        standout="bg-teal text-white"
-        v-model="password"
-        id="password"
-        label="Kata Laluan"
-        type="password"
-        v-on:input="checkValues"
-      />
-      <q-spinner v-if="authPending" color="primary" size="3em" />
-      <q-btn
-        v-else
-        color="primary"
-        label="Log Masuk"
-        @click="submitCredentials"
-      />
-    </div>
-  </q-page>
+  <div class="q-gutter-y-md column">
+    <q-card>
+      <q-card-section>
+        <div class="text-h6">Selamat Datang</div>
+      </q-card-section>
+      <q-card-section>
+        <q-input
+          standout="bg-teal text-white"
+          v-model="farmosUrl"
+          id="farmosUrl"
+          label="Nama Ladang"
+          v-on:input="checkValues"
+        >
+          <template v-slot:before>
+            <div class="text-body1">https://</div>
+          </template>
+          <template v-slot:after>
+            <div class="text-body1">.agriculture.gov.bn</div>
+          </template>
+        </q-input>
+        <q-input
+          standout="bg-teal text-white"
+          v-model="username"
+          id="username"
+          label="Nama Pengguna"
+          v-on:input="checkValues"
+        />
+        <q-input
+          standout="bg-teal text-white"
+          v-model="password"
+          id="password"
+          label="Kata Laluan"
+          type="password"
+          v-on:input="checkValues"
+        />
+      </q-card-section>
+      <q-card-actions>
+        <q-spinner v-if="authPending" color="primary" size="3em" />
+        <q-btn
+          v-else
+          class="full-width"
+          color="green-5"
+          icon="mdi-login"
+          label="Log Masuk"
+          @click="submitCredentials"
+        />
+      </q-card-actions>
+    </q-card>
+  </div>
 </template>
 
 <script>
@@ -71,7 +86,7 @@ export default defineComponent({
         username: username.value,
         password: password.value,
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        // router: store.$router,
+        router: store.$router,
       };
 
       authPending.value = true;
@@ -84,7 +99,7 @@ export default defineComponent({
           console.log('Set Login Status');
           store.commit('authModule/setLoginStatus', true);
           console.log('Login Status is set. Updating Field Modules');
-          // return $store.dispatch('updateFieldModules', this.$router); // TODO: Add shellModule to Store
+          // return $store.dispatch('updateFieldModules', store.$router); // TODO: Add shellModule to Store
         })
         .then((res) => store.dispatch('authModule/updateUserAndSiteInfo', res))
         .then((res) => store.dispatch('farmModule/updateFarmResources', res));
