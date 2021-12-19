@@ -11,25 +11,20 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> 
-          <img
-              src="Logo-KebunKitani.png"
-              style="height: 100px; max-width: 100px"
-    /> 
-      </q-toolbar-title>
+        <q-toolbar-title>
+          <img src="Logo-KebunKitani.png" id="logo" />
+        </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header> Menu </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+      <Profile />
+      <!-- <Settings /> -->
+      <EssentialLink
+        v-for="link in essentialLinks"
+        :key="link.title"
+        v-bind="link"
+      />
     </q-drawer>
 
     <q-page-container>
@@ -40,63 +35,51 @@
 
 <script lang="ts">
 import EssentialLink from 'components/EssentialLink.vue';
+import Profile from 'components/Profile.vue';
+// import Settings from 'components/Settings.vue';
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev',
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework',
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
+    title: 'Contact Us',
+    caption: 'kebunkitani.site/contact-us',
     icon: 'chat',
-    link: 'https://chat.quasar.dev',
+    link: 'https://kebunkitani.site/contact-us',
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev',
+    title: 'Kebun Kitani Website',
+    caption: 'kebunkitani.site',
+    icon: 'home',
+    link: 'https://kebunkitani.site',
   },
   {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev',
+    title: 'Privacy Policy',
+    caption: 'kebunkitani.site/privacy-%26-policy',
+    icon: 'mdi-shield-account',
+    link: 'https://kebunkitani.site/privacy-%26-policy',
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev',
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev',
+    title: 'Our Code is Open Sourced',
+    caption: 'github.com/Qoyyuum/KebunKitani',
+    icon: 'code',
+    link: 'https://github.com/Qoyyuum/KebunKitani',
   },
 ];
 
 import { defineComponent, ref } from 'vue';
+// import { useQuasar } from 'quasar';
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
     EssentialLink,
+    Profile,
+    // Settings,
   },
 
   setup() {
-    const leftDrawerOpen = ref(false);
+    // const $q = useQuasar();
+    const leftDrawerOpen = ref(true);
 
     return {
       essentialLinks: linksList,
@@ -108,3 +91,8 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="sass">
+#logo
+  height: 50px
+</style>
