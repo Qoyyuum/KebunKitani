@@ -15,7 +15,7 @@
           size="xl"
           @click="addLog"
           fab
-          :to="{ path: '/form/1' }"
+          :to="type.path"
         />
       </div>
     </q-fab>
@@ -48,24 +48,28 @@ export default defineComponent({
         label: 'Sayur',
         icon: 'mdi-corn',
         color: 'light-green-6',
+        path: { path: 'vegelist' },
       },
       {
         id: 2,
         label: 'Buah',
         icon: 'mdi-food-apple',
         color: 'orange-6',
+        path: { path: 'fruitlist' },
       },
       {
         id: 3,
         label: 'Bunga',
         icon: 'mdi-flower',
         color: 'pink-6',
+        path: { path: 'flowerlist' },
       },
       {
         id: 4,
         label: 'Ternakan',
         icon: 'mdi-food-drumstick',
         color: 'brown-6',
+        path: { path: 'meatlist' },
       },
     ];
 
